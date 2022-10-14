@@ -11,18 +11,26 @@
   </head>
 
   <body>
-    <header>
+  <header class="shadow-sm">
   <nav class ="navbar navbar-expand-ig navbar-dark bg-dark">
-    <h3>
-    <%= link_to 'Bookers', root_path, class: 'nav-link text-white' %>
-    </h3>
-    <% if user_signed_in? %>
+    <div class="container">
+     <h3>
+       <%= link_to 'Bookers', root_path, class: 'nav-link text-white' %>
+     </h3>
+
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+
+      <% if user_signed_in? %>
        <li class="nav-item"></li>
       <%= link_to 'Home', root_path, class: 'nav-link text-white' %>
       <li class="nav-item"></li>
         <%= link_to 'Books', books_path, class: 'nav-link text-white' %>
       <li class="nav-item"></li>
-      <%= link_to 'Sign up', new_user_registration_path,class: 'nav-link text-white' %>
+      <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link text-white' %>
       <li class="nav-item"></li>
       <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link text-white' %>
      <% else %>
@@ -35,18 +43,15 @@
       <li class="nav-item"></li>
       <%= link_to 'Log in', new_user_session_path, class: 'nav-link text-white' %>
      <% end %>
+     </ul>
+    </div>
+  </div>
   </nav>
 </header>
 
 </body>
   <%= yield %>
-  <footer>
-  <div class="container top">
-    <div class="row">
-      <div class="mix-auto">
-<p>CopyRight Infratop.inc</p>
-      </div>
-    </div>
-</div>
+<footer>
+  <p>CopyRight Infratop.inc</p>
 </footer>
 </html>
