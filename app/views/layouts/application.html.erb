@@ -25,7 +25,7 @@
 
       <% if user_signed_in? %>
        <li class="nav-item"></li>
-      <%= link_to 'Home', root_path, class: 'nav-link text-white' %>
+      <%= link_to 'Home', user_path(current_user), class: 'nav-link text-white' %>
             <li class="nav-item"></li>
       <%= link_to 'Users', users_path, class: 'nav-link text-white' %>
       <li class="nav-item"></li>
