@@ -18,8 +18,9 @@
             <% end %>
           </ul>
         <% end %>
-        <div class="form-group">
-          <%= form_with model: @book do |f| %>
+
+        <%= form_with model: @book do |f| %>
+         <div class="form-group">
             <p>Title</p>
             <%= f.text_field :title, class:"form-control" %>
         </div>

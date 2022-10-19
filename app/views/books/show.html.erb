@@ -19,8 +19,9 @@
             <% end %>
           </ul>
           <% end %>
+
+        <%= form_with model: @book, url: '/books', method: :post do |f| %>
         <div class="form-group">
-          <%= form_with model: @book, url: '/books', method: :post do |f| %>
           <p>Title</p>
            <%= f.text_field :title, class:"form-control" %>
         </div>
