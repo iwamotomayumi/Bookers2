@@ -7,17 +7,17 @@
   <tr></tr>
   <tr>
     <th>name</th>
-    <th><%= current_user.name %></th>
+    <th><%= book.name %></th>
   </tr>
   <tr>
     <th>introduction</th>
-    <th><%= current_user.introduction %></th>
+    <th><%= book.introduction %></th>
   </tr>
 </table>
 
 <div class="row">
   <div class="btn btn-outline-secondary btn-block">
-    <%= link_to edit_user_path(current_user) do %>
+    <%= link_to edit_user_path(book) do %>
       <i class="fas fa-user-cog"></i>
    <% end %>
   </div>
